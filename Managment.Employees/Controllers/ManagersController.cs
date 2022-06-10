@@ -11,7 +11,7 @@ namespace Managment.Employees.Controllers;
 
 [Controller]
 [Route("api/v1/[controller]")]
-//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "admin_policy")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "admin_policy")]
 public class ManagersController : ParametrizedControllerBase<EmployeeManager, EmployeeManagerResponse, CreateEmployeeManagerRequest>
 {
     public ManagersController(IRepository<EmployeeManager> repository, IMapper mapper) : base(repository, mapper)
